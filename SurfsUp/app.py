@@ -47,14 +47,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():        
-    print("Server received request for ''Home' page'...")
+    print("Server received request for 'Home' page...")
     """List all available api routes."""
-    return ("Welcome to my 'Home' page!"
-        f"</br>Available Routes:<br/>"
+    return (
+        "Welcome to my 'Home' page!"
+        f"<br>Available Routes:<br/>"
         f"/api/v1.0/precipitation<br/>"
-        f"/api/v1.0/stations</br>"
-        f"/api/v1.0/tobs</br>"
-        f"/api/v1.0/&lt;start&gt; and /api/v1.0/&lt;start&gt;/&lt;end&gt;<br/>"
+        f"/api/v1.0/stations<br/>"
+        f"/api/v1.0/tobs<br/>"
+        f"/api/v1.0/&lt;start&gt; (format: YYYYMMDD)<br/>"
+        f"/api/v1.0/&lt;start&gt;/&lt;end&gt; (format: YYYYMMDD/YYYYMMDD)<br/>"
     )
 
 # Question2.
